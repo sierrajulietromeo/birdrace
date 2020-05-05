@@ -9,13 +9,17 @@ def open_habitat_window():
 
    #Habitat window code and widgets
     habitat_window = Window(app, title="Habitat")
+    Text(habitat_window, text="")
     Text(habitat_window, text="You have arrived!")
-    Text(app, text="")
+    picture = Picture(habitat_window, image="images/geograph-1619354-by-N-Chadwick.png")
+    
+    Text(habitat_window, text="")
     arrival_Button = PushButton(habitat_window, text='Take an arrival card', command=take_arrival_card)
     habitatList = (habitats(db))
+    Text(habitat_window, text="Select habitat")
     habitat_dropdown = Combo(habitat_window, options=habitatList) 
     Text(habitat_window, text="Number of birds spotted: ")
-    num_spottings = Combo(habitat_window, options=[1, 2, 3, 4, 5, 6]) 
+    num_spottings = Combo(habitat_window, options=[3, 1, 2, 4, 5, 6]) 
     confirm_Button = PushButton(habitat_window, text='Start Spotting!', command=random_bird, args=[habitat_window, habitat_dropdown,num_spottings])
     cancel_Button = PushButton(habitat_window, text='Cancel', command=cancel_habitat_window, args=[habitat_window])
 
