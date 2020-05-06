@@ -20,7 +20,7 @@ def open_habitat_window():
     habitat_dropdown = Combo(habitat_window, options=habitatList) 
     Text(habitat_window, text="Number of birds spotted: ")
     num_spottings = Combo(habitat_window, options=[3, 1, 2, 4, 5, 6]) 
-    confirm_Button = PushButton(habitat_window, text='Start Spotting!', command=random_bird, args=[habitat_window, habitat_dropdown,num_spottings])
+    confirm_Button = PushButton(habitat_window, text='Start Spotting!', command=habitat_bird, args=[habitat_window, habitat_dropdown,num_spottings])
     cancel_Button = PushButton(habitat_window, text='Cancel', command=cancel_habitat_window, args=[habitat_window])
 
 
@@ -33,19 +33,35 @@ def count_birds():
     return num_bird
 
 ## Function called to select a random bird
-def random_bird(habitat_window, habitat_dropdown,num_spottings):
+def random_bird(habitat_window, habitat_dropdown, num_spottings):
 
     for i in range(1,int(num_spottings.value)+1):
 
         bird_num = str(randint(1,count_birds()))
-        bird_query = 'SELECT name from Bird WHERE number is ' + bird_num
-        bird_spot = default_query(bird_query)
-        bird_spot = [spot[0] for spot in bird_spot]
-        bird_spotted = str(bird_spot[0])  # cast to str in this case
-        habitat_window.info("Success","You spot a " + bird_spotted)
+        bird_query = 'SELECT name, points FROM Bird WHERE number is ' + bird_num
+        spot_bird(habitat_window, bird_query)
+        
     
-
+def habitat_bird(habitat_window, habitat_dropdown, num_spottings):
        
+        bird_query = 'SELECT Bird.Name, Bird.Points FROM Bird INNER JOIN Frequency ON Bird.Number=Frequency.BirdNum WHERE ' + habitat_dropdown.value + '<>0'
+        bird_spot = default_query(bird_query)
+        bird_num = int(randint(0,len(bird_spot)-1))
+        
+        
+        
+
+def spot_bird(habitat_window, bird_query):
+        bird_spot = default_query(bird_query)
+        bird_spott = [spot[0] for spot in bird_spot]
+        bird_spotted = str(bird_spott[0])  # cast to str in this case
+        bird_pts = [spot[1] for spot in bird_spot]
+        bird_points = str(bird_pts[0])  # cast to str in this case
+        
+        habitat_window.info("Success", "You spot a " + bird_spotted + "\n" + "\n" + bird_points + "pts")
+
+
+
 
 def create_connection():
     db = sqlite3.connect('birdrace')
