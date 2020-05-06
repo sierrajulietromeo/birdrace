@@ -43,12 +43,27 @@ def random_bird(habitat_window, habitat_dropdown, num_spottings):
         
     
 def habitat_bird(habitat_window, habitat_dropdown, num_spottings):
+
+    app.hide()
+    hab_value = habitat_concatenate(habitat_dropdown)
+
+    for i in range(1,int(num_spottings.value)+1):
        
-        bird_query = 'SELECT Bird.Name, Bird.Points FROM Bird INNER JOIN Frequency ON Bird.Number=Frequency.BirdNum WHERE ' + habitat_dropdown.value + '<>0'
+        bird_query = 'SELECT Bird.Name, Bird.Points FROM Bird INNER JOIN Frequency ON Bird.Number=Frequency.BirdNum WHERE ' + hab_value + '<>0'
         bird_spot = default_query(bird_query)
-        bird_num = int(randint(0,len(bird_spot)-1))
+        bird_num = int(randint(0,len(bird_spot)-1)) #pick random number from list
+        bird_spott = bird_spot[bird_num] 
+        habitat_window.info("Success", "You spot a " + str(bird_spott[0]) + "\n" + "\n" + str(bird_spott[1]) + "pts")
         
-        
+
+#deals with habitats that have a space in them        
+def habitat_concatenate(habitat_dropdown):
+
+    hab_value = habitat_dropdown.value 
+
+    if (' ' in hab_value) == True:
+        hab_value = hab_value.replace(" ", "")
+    return hab_value
         
 
 def spot_bird(habitat_window, bird_query):
@@ -102,6 +117,10 @@ def habitats(db):
     return habitat_result
 
 
+def quit_funct(db):
+  close_connection(db)  
+  app.destroy()
+
 
 db = create_connection()
 
@@ -120,6 +139,7 @@ Text(app, text="")
 phonecall_btn = PushButton(app, text='Make a phone call', command=make_phone_call)
 travel_btn = PushButton(app, text='Take a travel card', command=take_travel_card)
 habitat_btn = PushButton(app, text='Visit Habitat', command=open_habitat_window)
+quit_btn = PushButton(app, text='Quit', command=quit_funct, args=[db])
 
 
 
