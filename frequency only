@@ -1,0 +1,1 @@
+SELECT Frequency.Churchyard FROM Frequency INNER JOIN Bird ON Bird.Number=Frequency.BirdNum WHERE churchyard<>0
