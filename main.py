@@ -1,13 +1,15 @@
 from guizero import App, MenuBar, TextBox, Text, PushButton, Picture, Window, Combo
-from datetime import date
+from datetime import datetime
 import sqlite3
-from random import randint
+from random import randint, choices
 
-today = date.today()
+#today = date.today()
 
 def open_habitat_window():
 
-   #Habitat window code and widgets
+    app.hide() # hide main window 
+
+    #Habitat window code and widgets
     habitat_window = Window(app, title="Habitat")
     Text(habitat_window, text="")
     Text(habitat_window, text="You have arrived!")
@@ -44,16 +46,36 @@ def random_bird(habitat_window, habitat_dropdown, num_spottings):
     
 def habitat_bird(habitat_window, habitat_dropdown, num_spottings):
 
-    app.hide()
+    
     hab_value = habitat_concatenate(habitat_dropdown)
 
     for i in range(1,int(num_spottings.value)+1):
        
         bird_query = 'SELECT Bird.Name, Bird.Points FROM Bird INNER JOIN Frequency ON Bird.Number=Frequency.BirdNum WHERE ' + hab_value + '<>0'
         bird_spot = default_query(bird_query)
-        bird_num = int(randint(0,len(bird_spot)-1)) #pick random number from list
-        bird_spott = bird_spot[bird_num] 
-        habitat_window.info("Success", "You spot a " + str(bird_spott[0]) + "\n" + "\n" + str(bird_spott[1]) + "pts")
+        #Get the frequency data for the habitat/birds from the db. Store in var called bird_freq
+        bird_query = 'SELECT '+ hab_value + ' FROM Frequency INNER JOIN Bird ON Bird.Number=Frequency.BirdNum WHERE ' + hab_value + '<>0'
+        bird_freq = default_query(bird_query)
+        bird_freq = [freq[0] for freq in bird_freq]
+        
+        #Select a bird based on the frequency. (Based on the number of cards in the deck!) #using random.choices
+        bird_spott = choices(bird_spot,
+                      bird_freq,
+                      k=1
+                     )
+
+        bird_spot_name = [spot[0] for spot in bird_spott]
+        bird_spot_point = [spot[1] for spot in bird_spott]
+        bird_spot_name = str(bird_spot_name[0])  # cast to str in this case
+        bird_spot_point = str(bird_spot_point[0])  # cast to str in this case
+
+        #bird_spott = bird_spot[bird_num] 
+        habitat_window.info("Success", "You spot a " + bird_spot_name + "\n" + "\n" + bird_spot_point + "pts")
+
+        #write spot to a file
+        file_write(bird_spot_name, bird_spot_point, hab_value)
+
+        
         
 
 #deals with habitats that have a space in them        
@@ -76,6 +98,12 @@ def spot_bird(habitat_window, bird_query):
         habitat_window.info("Success", "You spot a " + bird_spotted + "\n" + "\n" + bird_points + "pts")
 
 
+def file_write(bird_spot_name, bird_spot_point, hab_value):
+    now = datetime.now()
+    now = now.strftime("%d/%m/%Y %H:%M:%S")
+    f = open("spottings.txt", "a")
+    f.write(str(now)+" " + bird_spot_name + " " + bird_spot_point + " " + hab_value + "\n")
+    f.close()
 
 
 def create_connection():
@@ -84,9 +112,6 @@ def create_connection():
 
 def close_connection(db):
     db.close()
-
-
-      
 
 
 def default_query(query):
@@ -107,6 +132,7 @@ def take_arrival_card():
 
 def cancel_habitat_window(habitat_window):
     habitat_window.hide()
+    app.show()
 
 # Populates the habitat combo box
 def habitats(db):
@@ -147,4 +173,5 @@ quit_btn = PushButton(app, text='Quit', command=quit_funct, args=[db])
 
 
 app.display()
+
 

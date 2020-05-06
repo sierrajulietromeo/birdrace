@@ -1,0 +1,26 @@
+2020-05-06 15:27:58.686220 Dunlin 2 Beach
+2020-05-06 15:27:59.898069 Herring Gull 1 Beach
+2020-05-06 15:28:01.461982 Herring Gull 1 Beach
+2020-05-06 15:28:10.853955 Green Woodpecker 3 OakWood
+2020-05-06 15:28:11.549357 Wren 1 OakWood
+2020-05-06 15:28:12.197749 Tree Pipit 3 OakWood
+2020-05-06 15:28:19.325925 Common Sandpiper 2 Stream
+2020-05-06 15:28:20.261895 Dipper 3 Stream
+2020-05-06 15:28:21.422092 Grey Heron 2 Stream
+2020-05-06 15:28:29.373951 Black Headed Gull 1 SewageWorks
+2020-05-06 15:28:30.166133 Carrion Crow 1 SewageWorks
+2020-05-06 15:28:30.893915 Blackbird 1 SewageWorks
+2020-05-06 15:28:31.541972 Common Gull 2 SewageWorks
+06/05/2020 15:30:49 Ringed Plover 2 Beach
+06/05/2020 15:30:49 Common Gull 2 Beach
+06/05/2020 15:30:49 Little Tern 4 Beach
+06/05/2020 15:30:57 Coot 1 Reservoir
+06/05/2020 15:30:57 Tufted Duck 2 Reservoir
+06/05/2020 15:30:58 Yellow Wagtail 3 Reservoir
+06/05/2020 15:30:58 Yellow Wagtail 3 Reservoir
+06/05/2020 15:30:59 Moorhen 1 Reservoir
+06/05/2020 15:30:59 Black Tern 4 Reservoir
+06/05/2020 15:31:07 Sandwich Tern 2 Island
+06/05/2020 15:31:07 Razorbill 3 Island
+06/05/2020 15:31:08 Kittiwake 2 Island
+06/05/2020 15:31:08 Stonechat 2 Island
