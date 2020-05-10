@@ -13,7 +13,7 @@ The game uses a lot of cards and the app is meant to make the game quicker and e
 - [ ] Add rarity cards
 - [ ] Add phone cards
 - [ ] Tidy up layout to use a grid layout
-- [ ] When bird name display
+- [ ] When bird name displayed make sure prefixed with a or an depending on whether bird name starts with a vowel or not
 - [ ] Add a timer that you can set.
 
 
