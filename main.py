@@ -15,7 +15,8 @@ def open_habitat_window():
     main_box = Box(habitat_window, layout="grid")
     picture = Picture(title_box, image="images/geograph-1619354-by-N-Chadwick.png")
     Text(title_box, text="")
-    #arrival_Button = PushButton(habitat_window, text='Take an arrival card', command=take_arrival_card)
+    arrival_Button = PushButton(title_box, text='Take an arrival card', command=take_arrival_card, args=[habitat_window])
+    Text(title_box, text="")
     habitatList = (habitats(db))
     
     Text(main_box, text="Player #", grid=[1,1], align="right")
@@ -132,8 +133,23 @@ def make_phone_call():
 def take_travel_card():
     pass
 
-def take_arrival_card():
-    pass
+def take_arrival_card(habitat_window):
+    
+    arrival_query = 'SELECT * FROM Arrival'
+    arrival_query = default_query(arrival_query)
+    arrival_card = [arr[0] for arr in arrival_query]
+    
+    arr_weight = [arr[1] for arr in arrival_query]
+    
+    arr_card = choices(arrival_card,
+                      arr_weight,
+                      k=1
+                     )
+    arr_card = str(arr_card[0])  # cast to str in this case
+               
+    habitat_window.info("Arrival", arr_card)
+    
+
 
 def cancel_habitat_window(habitat_window):
     habitat_window.hide()
