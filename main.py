@@ -1,4 +1,4 @@
-from guizero import App, MenuBar, TextBox, Text, PushButton, Picture, Window, Combo
+from guizero import App, MenuBar, TextBox, Text, PushButton, Picture, Window, Combo, Box
 from datetime import datetime
 import sqlite3
 from random import randint, choices
@@ -11,20 +11,22 @@ def open_habitat_window():
 
     #Habitat window code and widgets
     habitat_window = Window(app, title="Habitat")
-    Text(habitat_window, text="")
-    picture = Picture(habitat_window, image="images/geograph-1619354-by-N-Chadwick.png")
-    
-    Text(habitat_window, text="")
+    title_box = Box(habitat_window, align="top", width="fill")
+    main_box = Box(habitat_window, layout="grid")
+    picture = Picture(title_box, image="images/geograph-1619354-by-N-Chadwick.png")
+    Text(title_box, text="")
     #arrival_Button = PushButton(habitat_window, text='Take an arrival card', command=take_arrival_card)
     habitatList = (habitats(db))
-    Text(habitat_window, text="Player #")
-    player_num = Combo(habitat_window, options=[1, 2, 3, 4, 5, 6])
-    Text(habitat_window, text="Select habitat")
-    habitat_dropdown = Combo(habitat_window, options=habitatList) 
-    Text(habitat_window, text="Number of birds spotted: ")
-    num_spottings = Combo(habitat_window, options=[1, 2, 3, 4, 5, 6]) 
-    confirm_Button = PushButton(habitat_window, text='Start Spotting!', command=habitat_bird, args=[habitat_window, player_num, habitat_dropdown,num_spottings])
-    cancel_Button = PushButton(habitat_window, text='Cancel', command=cancel_habitat_window, args=[habitat_window])
+    
+    Text(main_box, text="Player #", grid=[1,1], align="right")
+    player_num = Combo(main_box, options=[1, 2, 3, 4, 5, 6], grid=[2,1], align="left")
+    Text(main_box, text="Select habitat:", grid=[1,2], align="right")
+    habitat_dropdown = Combo(main_box, options=habitatList, grid=[2,2], align="left") 
+    Text(main_box, text="Number of birds spotted: ",  grid=[1,3], align="right")
+    num_spottings = Combo(main_box, options=[1, 2, 3, 4, 5, 6], grid=[2,3], align="left") 
+    Text(main_box, text="",  grid=[1,4])
+    confirm_Button = PushButton(main_box, text='Start Spotting!', command=habitat_bird, args=[habitat_window, player_num, habitat_dropdown,num_spottings], grid=[2,5])
+    cancel_Button = PushButton(main_box, text='Cancel', command=quit_funct, args=[db], grid=[1,5])
 
 
 ## Counts the number of birds in the database. This is used to select a random number to select a random bird.
@@ -73,7 +75,7 @@ def habitat_bird(habitat_window, player_num, habitat_dropdown, num_spottings):
         bird_spot_point = str(bird_spot_point[0])  # cast to str in this case
 
         #bird_spott = bird_spot[bird_num] 
-        habitat_window.info("Success", "Spot " + str(i) + "\n" + "You spot a " + bird_spot_name + " (" + bird_spot_numb + ")\n" + bird_spot_point + "pts")
+        habitat_window.info("Success", "Spot " + str(i) + "\n" + "You spot a " + bird_spot_name + " (#" + bird_spot_numb + ")\n" + bird_spot_point + "pts")
 
         #write spot to a file
         file_write(bird_spot_name, bird_spot_point, hab_value, player_num)

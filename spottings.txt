@@ -115,3 +115,27 @@
 11/05/2020 07:25:46 Player: 1 Herring Gull 1 Beach
 11/05/2020 07:25:48 Player: 1 Knot 2 Beach
 11/05/2020 07:26:00 Player: 1 Great Black Backed Gull 2 Beach
+11/05/2020 07:49:08 Player: 1 Grey Plover 2 Beach
+11/05/2020 07:49:09 Player: 1 Dunlin 2 Beach
+11/05/2020 07:49:09 Player: 1 Oystercatcher 1 Beach
+11/05/2020 07:49:10 Player: 1 Turnstone 2 Beach
+11/05/2020 10:57:27 Player: 1 Ringed Plover 2 Beach
+11/05/2020 10:57:56 Player: 3 Sanderling 3 Beach
+11/05/2020 10:57:57 Player: 3 Little Tern 4 Beach
+11/05/2020 10:58:04 Player: 3 Skylark 1 Headland
+11/05/2020 10:58:06 Player: 3 Stock Dove 2 Headland
+11/05/2020 10:58:14 Player: 3 Coot 1 Reservoir
+11/05/2020 10:58:17 Player: 3 Ruff 3 Reservoir
+11/05/2020 10:58:24 Player: 3 Raven 3 Mountains
+11/05/2020 10:58:26 Player: 3 Ring Ouzel 3 Mountains
+11/05/2020 10:58:33 Player: 3 Tufted Duck 2 Reservoir
+11/05/2020 10:58:37 Player: 3 Common Gull 2 Reservoir
+11/05/2020 11:06:39 Player: 3 Teal 2 Marsh
+11/05/2020 11:06:40 Player: 3 Savi's Warbler 5 Marsh
+11/05/2020 11:07:22 Player: 1 Crested Tit 4 ConiferWood
+11/05/2020 11:07:30 Player: 1 Wood Pigeon 1 ConiferWood
+11/05/2020 11:07:31 Player: 1 Coal Tit 2 ConiferWood
+11/05/2020 11:07:32 Player: 1 Wood Pigeon 1 ConiferWood
+11/05/2020 11:07:33 Player: 1 Long Eared Owl 4 ConiferWood
+11/05/2020 11:07:34 Player: 1 Coal Tit 2 ConiferWood
+11/05/2020 11:07:34 Player: 1 Redpoll 2 ConiferWood
