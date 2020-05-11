@@ -22,7 +22,7 @@ def open_habitat_window():
     Text(habitat_window, text="Select habitat")
     habitat_dropdown = Combo(habitat_window, options=habitatList) 
     Text(habitat_window, text="Number of birds spotted: ")
-    num_spottings = Combo(habitat_window, options=[3, 1, 2, 4, 5, 6]) 
+    num_spottings = Combo(habitat_window, options=[1, 2, 3, 4, 5, 6]) 
     confirm_Button = PushButton(habitat_window, text='Start Spotting!', command=habitat_bird, args=[habitat_window, player_num, habitat_dropdown,num_spottings])
     cancel_Button = PushButton(habitat_window, text='Cancel', command=cancel_habitat_window, args=[habitat_window])
 
@@ -52,7 +52,7 @@ def habitat_bird(habitat_window, player_num, habitat_dropdown, num_spottings):
 
     for i in range(1,int(num_spottings.value)+1):
        
-        bird_query = 'SELECT Bird.Name, Bird.Points FROM Bird INNER JOIN Frequency ON Bird.Number=Frequency.BirdNum WHERE ' + hab_value + '<>0'
+        bird_query = 'SELECT Bird.Number, Bird.Name, Bird.Points FROM Bird INNER JOIN Frequency ON Bird.Number=Frequency.BirdNum WHERE ' + hab_value + '<>0'
         bird_spot = default_query(bird_query)
         #Get the frequency data for the habitat/birds from the db. Store in var called bird_freq
         bird_query = 'SELECT '+ hab_value + ' FROM Frequency INNER JOIN Bird ON Bird.Number=Frequency.BirdNum WHERE ' + hab_value + '<>0'
@@ -65,13 +65,15 @@ def habitat_bird(habitat_window, player_num, habitat_dropdown, num_spottings):
                       k=1
                      )
 
-        bird_spot_name = [spot[0] for spot in bird_spott]
-        bird_spot_point = [spot[1] for spot in bird_spott]
+        bird_spot_numb = [spot[0] for spot in bird_spott]
+        bird_spot_name = [spot[1] for spot in bird_spott]
+        bird_spot_point = [spot[2] for spot in bird_spott]
+        bird_spot_numb = str(bird_spot_numb[0])  # cast to str in this case
         bird_spot_name = str(bird_spot_name[0])  # cast to str in this case
         bird_spot_point = str(bird_spot_point[0])  # cast to str in this case
 
         #bird_spott = bird_spot[bird_num] 
-        habitat_window.info("Success", "You spot a " + bird_spot_name + "\n" + "\n" + bird_spot_point + "pts")
+        habitat_window.info("Success", "Spot " + str(i) + "\n" + "You spot a " + bird_spot_name + " (" + bird_spot_numb + ")\n" + bird_spot_point + "pts")
 
         #write spot to a file
         file_write(bird_spot_name, bird_spot_point, hab_value, player_num)

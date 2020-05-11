@@ -18,3 +18,100 @@
 06/05/2020 17:35:12 Player: 2 Great Black Backed Gull 2 Beach
 06/05/2020 17:35:13 Player: 2 Ringed Plover 2 Beach
 06/05/2020 17:35:15 Player: 2 Oystercatcher 1 Beach
+10/05/2020 19:54:00 Player: 1 Bullfinch 2 UrbanPark
+10/05/2020 19:54:13 Player: 1 Pied Wagtail 1 UrbanPark
+10/05/2020 19:54:29 Player: 1 Robin 2 UrbanPark
+10/05/2020 20:00:37 Player: 1 Starling 1 UrbanPark
+10/05/2020 20:01:08 Player: 1 Hoopoo 5 UrbanPark
+10/05/2020 20:01:31 Player: 1 Bullfinch 2 UrbanPark
+10/05/2020 20:03:02 Player: 1 Pied Wagtail 1 UrbanPark
+10/05/2020 20:03:14 Player: 1 Dunnock 1 UrbanPark
+10/05/2020 20:07:24 Player: 1 Greenfinch 2 UrbanPark
+10/05/2020 20:07:43 Player: 1 Grey Plover 2 Beach
+10/05/2020 20:07:47 Player: 1 Grey Plover 2 Beach
+10/05/2020 20:07:54 Player: 1 Oystercatcher 1 Beach
+10/05/2020 20:08:02 Player: 1 Common Gull 2 Beach
+10/05/2020 20:08:11 Player: 1 Dunlin 2 Beach
+10/05/2020 20:08:30 Player: 1 Herring Gull 1 Beach
+10/05/2020 20:12:46 Player: 1 Herring Gull 1 Beach
+10/05/2020 20:12:55 Player: 1 Ringed Plover 2 Beach
+10/05/2020 20:12:58 Player: 1 Ringed Plover 2 Beach
+10/05/2020 20:15:43 Player: 1 Mallard 1 Estuary
+10/05/2020 20:16:06 Player: 1 Linnet 2 Estuary
+10/05/2020 20:16:17 Player: 1 Lesser Black Backed Gull 2 Estuary
+10/05/2020 20:16:33 Player: 1 Curlew 3 Estuary
+10/05/2020 20:16:39 Player: 1 Black Headed Gull 1 Estuary
+10/05/2020 20:18:45 Player: 1 Carrion Crow 1 Estuary
+10/05/2020 20:18:55 Player: 1 Knot 2 Estuary
+10/05/2020 20:19:04 Player: 1 Shelduck 2 Estuary
+10/05/2020 20:19:53 Player: 1 Starling 1 UrbanPark
+10/05/2020 20:20:21 Player: 1 House Martin 2 UrbanPark
+10/05/2020 20:20:27 Player: 1 Goldfinch 2 UrbanPark
+10/05/2020 20:22:55 Player: 1 Hoopoo 5 UrbanPark
+10/05/2020 20:22:56 Player: 1 Bullfinch 2 UrbanPark
+10/05/2020 20:22:56 Player: 1 Blue Tit 1 UrbanPark
+10/05/2020 20:23:11 Player: 1 Sandwich Tern 2 Estuary
+10/05/2020 20:23:16 Player: 1 Shelduck 2 Estuary
+10/05/2020 20:23:21 Player: 1 Curlew 3 Estuary
+10/05/2020 20:26:09 Player: 1 House Martin 2 UrbanPark
+10/05/2020 20:26:17 Player: 1 Greenfinch 2 UrbanPark
+10/05/2020 20:28:59 Player: 1 Manderin 3 UrbanPark
+10/05/2020 20:29:15 Player: 5 Lesser Spotted Woodpecker 4 OakWood
+10/05/2020 20:29:28 Player: 5 Willow Warbler 2 OakWood
+10/05/2020 20:29:37 Player: 5 Treecreeper 2 OakWood
+10/05/2020 20:29:50 Player: 5 Buzzard 2 OakWood
+10/05/2020 20:30:18 Player: 5 Redstart 3 OakWood
+10/05/2020 20:32:15 Player: 5 Nuthatch 2 OakWood
+10/05/2020 20:32:23 Player: 5 Wren 1 OakWood
+10/05/2020 20:32:27 Player: 5 Buzzard 2 OakWood
+10/05/2020 20:41:43 Player: 5 Canada Goose 2 Lake
+10/05/2020 20:41:52 Player: 5 Pochard 2 Lake
+10/05/2020 20:42:08 Player: 5 Canada Goose 2 Lake
+10/05/2020 20:43:55 Player: 5 Coot 1 Lake
+10/05/2020 20:44:03 Player: 5 Lapwing 2 Lake
+10/05/2020 20:46:31 Player: 5 Reed Bunting 2 Lake
+11/05/2020 07:10:13 Player: 1 Bullfinch 2 UrbanPark
+11/05/2020 07:11:33 Player: 1 Greenfinch 2 UrbanPark
+11/05/2020 07:15:11 Player: 1 Jackdaw 1 UrbanPark
+11/05/2020 07:15:12 Player: 1 Manderin 3 UrbanPark
+11/05/2020 07:15:26 Player: 1 Herring Gull 1 Beach
+11/05/2020 07:15:31 Player: 1 Goldfinch 2 UrbanPark
+11/05/2020 07:15:33 Player: 1 Great Tit 1 UrbanPark
+11/05/2020 07:15:37 Player: 1 Swift 2 UrbanPark
+11/05/2020 07:15:41 Player: 1 House Sparrow 1 UrbanPark
+11/05/2020 07:15:42 Player: 1 House Sparrow 1 UrbanPark
+11/05/2020 07:15:42 Player: 1 Robin 2 UrbanPark
+11/05/2020 07:15:43 Player: 1 House Sparrow 1 UrbanPark
+11/05/2020 07:15:44 Player: 1 Blackbird 1 UrbanPark
+11/05/2020 07:15:44 Player: 1 Starling 1 UrbanPark
+11/05/2020 07:15:45 Player: 1 Pied Wagtail 1 UrbanPark
+11/05/2020 07:15:46 Player: 1 Jackdaw 1 UrbanPark
+11/05/2020 07:15:47 Player: 1 Dunnock 1 UrbanPark
+11/05/2020 07:15:48 Player: 1 Blackbird 1 UrbanPark
+11/05/2020 07:15:49 Player: 1 Hoopoo 5 UrbanPark
+11/05/2020 07:15:50 Player: 1 Grey Wagtail 2 UrbanPark
+11/05/2020 07:15:51 Player: 1 Ring Necked Parakeet 4 UrbanPark
+11/05/2020 07:15:51 Player: 1 Green Woodpecker 3 UrbanPark
+11/05/2020 07:19:07 Player: 1 Dunlin 2 Beach
+11/05/2020 07:19:09 Player: 1 Dunlin 2 Beach
+11/05/2020 07:19:11 Player: 1 Dunlin 2 Beach
+11/05/2020 07:19:14 Player: 1 Sanderling 3 Beach
+11/05/2020 07:19:16 Player: 1 Sanderling 3 Beach
+11/05/2020 07:19:17 Player: 1 Grey Plover 2 Beach
+11/05/2020 07:19:24 Player: 1 Oystercatcher 1 Beach
+11/05/2020 07:19:27 Player: 1 Turnstone 2 Beach
+11/05/2020 07:19:29 Player: 1 Ringed Plover 2 Beach
+11/05/2020 07:19:31 Player: 1 Oystercatcher 1 Beach
+11/05/2020 07:19:33 Player: 1 Little Tern 4 Beach
+11/05/2020 07:20:49 Player: 1 Knot 2 Beach
+11/05/2020 07:23:19 Player: 1 Dunlin 2 Beach
+11/05/2020 07:23:37 Player: 1 Oystercatcher 1 Beach
+11/05/2020 07:24:07 Player: 1 Kentish Plover 4 Beach
+11/05/2020 07:24:26 Player: 1 Common Gull 2 Beach
+11/05/2020 07:25:11 Player: 1 Turnstone 2 Beach
+11/05/2020 07:25:23 Player: 1 Herring Gull 1 Beach
+11/05/2020 07:25:40 Player: 1 Common Gull 2 Beach
+11/05/2020 07:25:44 Player: 1 Ringed Plover 2 Beach
+11/05/2020 07:25:46 Player: 1 Herring Gull 1 Beach
+11/05/2020 07:25:48 Player: 1 Knot 2 Beach
+11/05/2020 07:26:00 Player: 1 Great Black Backed Gull 2 Beach
