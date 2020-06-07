@@ -16,6 +16,7 @@ def open_habitat_window():
     picture = Picture(title_box, image="images/geograph-1619354-by-N-Chadwick.png")
     Text(title_box, text="")
     arrival_Button = PushButton(title_box, text='Take an arrival card', command=take_arrival_card, args=[habitat_window])
+    rarity_Button = PushButton(title_box, text='Take a rarity card', command=take_rarity_card, args=[habitat_window])
     Text(title_box, text="")
     habitatList = (habitats(db))
     
@@ -27,7 +28,7 @@ def open_habitat_window():
     num_spottings = Combo(main_box, options=[1, 2, 3, 4, 5, 6], grid=[2,3], align="left") 
     Text(main_box, text="",  grid=[1,4])
     confirm_Button = PushButton(main_box, text='Start Spotting!', command=habitat_bird, args=[habitat_window, player_num, habitat_dropdown,num_spottings], grid=[2,5])
-    cancel_Button = PushButton(main_box, text='Cancel', command=quit_funct, args=[db], grid=[1,5])
+    cancel_Button = PushButton(main_box, text='Cancel', command=cancel_habitat_window, args=[habitat_window], grid=[1,5])
 
 
 ## Counts the number of birds in the database. This is used to select a random number to select a random bird.
@@ -126,12 +127,54 @@ def default_query(query):
     results = cursor.fetchall()
     return results
 
+def take_rarity_card(habitat_window):
+
+    rarity_query = 'SELECT Card FROM Rarity'
+    rarity_query = default_query(rarity_query)
+    rarity_card = [arr[0] for arr in rarity_query]
+    
+    
+    rare_card = str(rarity_card[randint(0,len(rarity_card)-1)])
+                    
+    app.info("Rarity", rare_card)
+
+
+
 def make_phone_call():
-    pass
+
+    phone_query = 'SELECT * FROM Phone'
+    phone_query = default_query(phone_query)
+    phone_card = [arr[0] for arr in phone_query]
+    
+    phone_weight = [arr[1] for arr in phone_query]
+    
+    ph_card = choices(phone_card,
+                      phone_weight,
+                      k=1
+                     )
+    ph_card = str(ph_card[0])  # cast to str in this case
+               
+    app.info("Phone Call", ph_card)
+
 
 
 def take_travel_card():
-    pass
+    
+    travel_query = 'SELECT * FROM Travel'
+    travel_query = default_query(travel_query)
+    travel_card = [arr[0] for arr in travel_query]
+    
+    travel_weight = [arr[1] for arr in travel_query]
+    
+    tr_card = choices(travel_card,
+                      travel_weight,
+                      k=1
+                     )
+    tr_card = str(tr_card[0])  # cast to str in this case
+               
+    app.info("Travel Card", tr_card)
+
+
 
 def take_arrival_card(habitat_window):
     
@@ -183,8 +226,8 @@ app = App(title='Bill Oddie Bird Race Game')
 Text(app, text="")
 picture = Picture(app, image="images/box.png")
 Text(app, text="")
-#phonecall_btn = PushButton(app, text='Make a phone call', command=make_phone_call)
-#travel_btn = PushButton(app, text='Take a travel card', command=take_travel_card)
+phonecall_btn = PushButton(app, text='Make a phone call', command=make_phone_call)
+travel_btn = PushButton(app, text='Take a travel card', command=take_travel_card)
 habitat_btn = PushButton(app, text='Visit Habitat', command=open_habitat_window)
 quit_btn = PushButton(app, text='Quit', command=quit_funct, args=[db])
 

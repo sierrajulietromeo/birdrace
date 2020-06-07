@@ -139,3 +139,7 @@
 11/05/2020 11:07:33 Player: 1 Long Eared Owl 4 ConiferWood
 11/05/2020 11:07:34 Player: 1 Coal Tit 2 ConiferWood
 11/05/2020 11:07:34 Player: 1 Redpoll 2 ConiferWood
+24/05/2020 16:50:36 Player: 1 Oystercatcher 1 Beach
+27/05/2020 17:25:19 Player: 1 Chiffchaff 2 MixedWood
+27/05/2020 17:25:25 Player: 1 Chiffchaff 2 MixedWood
+27/05/2020 17:25:30 Player: 1 Great Tit 1 MixedWood
