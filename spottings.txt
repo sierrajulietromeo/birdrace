@@ -143,3 +143,6 @@
 27/05/2020 17:25:19 Player: 1 Chiffchaff 2 MixedWood
 27/05/2020 17:25:25 Player: 1 Chiffchaff 2 MixedWood
 27/05/2020 17:25:30 Player: 1 Great Tit 1 MixedWood
+18/07/2022 09:46:27 Player: 1 Tufted Duck 2 Lake
+18/07/2022 09:46:29 Player: 1 Reed Warbler 2 Lake
+18/07/2022 09:46:31 Player: 1 Tufted Duck 2 Lake
