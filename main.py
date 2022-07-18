@@ -1,9 +1,45 @@
-from guizero import App, MenuBar, TextBox, Text, PushButton, Picture, Window, Combo
+#imports (standard flask and mysqlconnector)
+from flask import Flask, render_template, request
+import mysql.connector
 from datetime import datetime
-import sqlite3
 from random import randint, choices
+import os
 
 #today = date.today()
+
+app = Flask(__name__)
+
+
+#connecting to local database. This is obvs terrible security. 
+try:
+    birddb = mysql.connector.connect(user='steve', password='steve123',
+                                host='127.0.0.1', database='birdrace',
+                                auth_plugin='mysql_native_password')
+
+except mysql.connector.Error as err:
+  print(f"Something went wrong: {err}")
+
+
+
+
+
+#Code runs if index.html called (root)
+@app.route('/', methods=['GET', 'POST'])
+def index():
+    if "phone" in request.form:
+        pass
+    elif "travel" in request.form:
+        pass
+    elif "habitat" in request.form:
+        return render_template('/habitat.html') 
+    else:
+        return render_template('/index.html')
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
+'''
 
 def open_habitat_window():
 
@@ -176,3 +212,5 @@ quit_btn = PushButton(app, text='Quit', command=quit_funct, args=[db])
 app.display()
 
 
+
+'''
