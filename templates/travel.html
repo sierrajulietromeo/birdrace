@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawing a travel card</title>
+</head>
+<style>
+    table, th, td {
+    border: 1px solid black;
+    }
+    th {
+    text-align: center;
+    }
+</style>
+
+<body>
+        <center>
+        
+        Picture of a travel card here. <br><br>
+
+        {{data}} <br><br>
+        <form method="POST" action="/travel">
+        <input type = "submit" name="again" value="Draw again"><br><br>
+        <input type = "submit" name="index" value="Back">
+        </form>
+        </center>
+   
+</body>
+</html>

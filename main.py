@@ -8,6 +8,7 @@ import os
 #today = date.today()
 
 app = Flask(__name__)
+app.secret_key = "abc"  
 
 
 #connecting to local database. This is obvs terrible security. 
@@ -20,24 +21,87 @@ except mysql.connector.Error as err:
   print(f"Something went wrong: {err}")
 
 
+def default_query(query):
+    cursor = birddb.cursor()
+    cursor.execute(query)
+    results = cursor.fetchall()
+    return results
+
+def draw_phone_card():
+    
+    phone_query = 'SELECT * FROM tbl_phone'
+    phone_query = default_query(phone_query)
+    phone_card = [arr[0] for arr in phone_query]
+    phone_weight = [arr[1] for arr in phone_query]
+
+    ph_card = choices(phone_card,
+                      phone_weight,
+                      k=1
+                     )
+    ph_card = str(ph_card[0])  # cast to str in this case
+
+    return ph_card
 
 
+def draw_travel_card():
+
+    travel_query = 'SELECT * FROM tbl_travel'
+    travel_query = default_query(travel_query)
+    travel_card = [arr[0] for arr in travel_query]
+    travel_weight = [arr[1] for arr in travel_query]
+
+    tr_card = choices(travel_card,
+                      travel_weight,
+                      k=1
+                     )
+    tr_card = str(tr_card[0])  # cast to str in this case
+
+    return tr_card
 
 #Code runs if index.html called (root)
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if "phone" in request.form:
-        pass
+        return render_template('/phone.html', data=draw_phone_card())
     elif "travel" in request.form:
-        pass
+        return render_template('/travel.html', data=draw_travel_card())
     elif "habitat" in request.form:
         return render_template('/habitat.html') 
     else:
         return render_template('/index.html')
 
 
+#Code runs if phone.html called 
+@app.route('/phone', methods=['GET', 'POST'])
+def phone():
+    if "again" in request.form:
+        return render_template('/phone.html', data=draw_phone_card())
+    else:
+        return render_template('/index.html')  
+
+
+#Code runs if travel.html called 
+@app.route('/travel', methods=['GET', 'POST'])
+def travel():
+    if "again" in request.form:
+        return render_template('/travel.html', data=draw_travel_card())
+    else:
+        return render_template('/index.html')        
+
+
 if __name__ == '__main__':
     app.run(debug=True)
+
+
+
+
+
+
+
+
+
+
+
 
 '''
 
@@ -158,7 +222,20 @@ def default_query(query):
     return results
 
 def make_phone_call():
-    pass
+
+    phone_query = 'SELECT * FROM Phone'
+    phone_query = default_query(phone_query)
+    phone_card = [arr[0] for arr in phone_query]
+
+    phone_weight = [arr[1] for arr in phone_query]
+
+    ph_card = choices(phone_card,
+                      phone_weight,
+                      k=1
+                     )
+    ph_card = str(ph_card[0])  # cast to str in this case
+
+    app.info("Phone Call", ph_card)
 
 
 def take_travel_card():
