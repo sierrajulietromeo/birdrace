@@ -16,6 +16,31 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `tbl_arrival`
+--
+
+DROP TABLE IF EXISTS `tbl_arrival`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `tbl_arrival` (
+  `Card` varchar(125) NOT NULL,
+  `Weight` int NOT NULL DEFAULT '0',
+  PRIMARY KEY (`Card`),
+  UNIQUE KEY `Card` (`Card`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tbl_arrival`
+--
+
+LOCK TABLES `tbl_arrival` WRITE;
+/*!40000 ALTER TABLE `tbl_arrival` DISABLE KEYS */;
+INSERT INTO `tbl_arrival` VALUES ('4WD VEHICLE. Create excess noise on arrival - leave immediately. Does not apply to sports car owners.',1),('BAD WEATHER. No birds during first turn.',3),('CAUGHT TRESPASSING. Move on to next site.',1),('CONTINUE BIRDING',12),('CREAT DISTURBANCE. Collect one bird only and move on.',1),('DAMAGE BINOCULARS. Collect only two birds per turn.',2),('DISTURBANCE AT SITE. Move on to next site or wait two turns and try again.',1),('EXCELLENT CONDITIONS. Observe twice number of birds during first turn.',3),('MEET OTHER BIRDERS. Collect one extra bird.',2),('MEET RSPB REPRESENTATIVE. Collect one extra bird.',2),('MISPLACE BINOCULARS. Collect only one bird for each turn at habitat.',1),('MIST. Move on to next site or wait three turns and try again.',1),('RAIN. Collect only one bird during first turn at site.',1),('SPORTS CAR. Speeding on arrival - annoys locals - leave immediately. Does not apply to 4WD owners.',1),('TIMED ARRIVAL WELL. Collect two extra birds during first turn.',3),('WIND DROPS. SUN COMES OUT! Collect four birds per turn.',1);
+/*!40000 ALTER TABLE `tbl_arrival` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `tbl_bird`
 --
 
@@ -110,6 +135,79 @@ LOCK TABLES `tbl_habitat` WRITE;
 INSERT INTO `tbl_habitat` VALUES (1,'Island',1),(2,'Beach',0),(3,'Churchyard',0),(4,'Stream',0),(5,'Conifer Wood',0),(6,'Marsh',1),(7,'Estuary',0),(8,'Oak Wood',0),(9,'Sea Cliffs',0),(10,'Sewage Works',0),(11,'Urban Park',0),(12,'Mountains',0),(13,'Reservoir',0),(14,'Heath',1),(15,'Mixed Wood',0),(16,'Lake',0),(17,'Headland',1);
 /*!40000 ALTER TABLE `tbl_habitat` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Table structure for table `tbl_phone`
+--
+
+DROP TABLE IF EXISTS `tbl_phone`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `tbl_phone` (
+  `Card` varchar(150) NOT NULL,
+  `Weight` int DEFAULT NULL,
+  PRIMARY KEY (`Card`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tbl_phone`
+--
+
+LOCK TABLES `tbl_phone` WRITE;
+/*!40000 ALTER TABLE `tbl_phone` DISABLE KEYS */;
+INSERT INTO `tbl_phone` VALUES ('GOOD INFORMATION. Collect twice number of birds at the CONIFER WOOD during first turn at site. (One use only.) ',1),('GOOD INFORMATION. Collect twice number of birds at the ESTUARY during first turn at site. (One use only.)',1),('GOOD INFORMATION. Collect twice number of birds at the HEATH during first turn at site. (One use only.) ',1),('GOOD INFORMATION. Collect twice number of birds at the ISLAND during first turn at site. (One use only.) ',1),('GOOD INFORMATION. Collect twice number of birds at the LAKE during first turn at site. (One use only.) ',1),('GOOD INFORMATION. Collect twice number of birds at the MIXED WOOD during first turn at site. (One use only.) ',1),('GOOD INFORMATION. Collect twice number of birds at the OAK WOOD during first turn at site. (One use only.) ',1),('NOTHING ABOUT',2),('PERMIT - ENTRY TO RESERVE. (Note down and cross off when used.)',10),('PHONE IN USE. MISS ONE turn and move on.',1),('PHONE OUT OF ORDER',1),('RARITY at the HEADLAND. Return when used.',2),('RARITY at the MARSH. Return when used.',2),('RARITY at the RESERVOIR. Return when used.',2);
+/*!40000 ALTER TABLE `tbl_phone` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `tbl_rarity`
+--
+
+DROP TABLE IF EXISTS `tbl_rarity`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `tbl_rarity` (
+  `Card` varchar(50) NOT NULL,
+  `Picture` blob,
+  PRIMARY KEY (`Card`),
+  UNIQUE KEY `Card` (`Card`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tbl_rarity`
+--
+
+LOCK TABLES `tbl_rarity` WRITE;
+/*!40000 ALTER TABLE `tbl_rarity` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tbl_rarity` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `tbl_travel`
+--
+
+DROP TABLE IF EXISTS `tbl_travel`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `tbl_travel` (
+  `Card` varchar(255) NOT NULL,
+  `Frequency` int NOT NULL DEFAULT '1',
+  PRIMARY KEY (`Card`),
+  UNIQUE KEY `Card` (`Card`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tbl_travel`
+--
+
+LOCK TABLES `tbl_travel` WRITE;
+/*!40000 ALTER TABLE `tbl_travel` DISABLE KEYS */;
+INSERT INTO `tbl_travel` VALUES ('Barn Owl (107) 3pts. POCKETFUL OF CHANGE. Make two phone calls at next phone box.',1),('Black Headed Gull (84) 1pt. FLOCK OF SHEEP IN ROAD. Miss one turn.',1),('Blackbird (143) 1pt',1),('Blackbird (143) 1pt. ENGINE OVERHEATS. Miss one turn.',1),('Buzzard (36) 2pts',1),('Carrion Crow (181) 1pt',1),('Carrion Crow (181) 1pt. GOING TOO WELL. Go back four squares.',1),('Collared Dove (103) 1pt',1),('Cuckoo (106) 2pts. CLEAR ROAD! Move on four squares.',1),('Dunnock (133) 1pt. GOING WELL! Move on three squares.',1),('Goldfinch (189) 2pts',1),('Great Tit (171) 1pt',1),('Green Woodpecker (117) 3pts. GO ON PUT YOUR FOOT DOWN! Speed on six squares.',1),('Grey Partridge (48) 2pts',1),('Grey Partridge (48) 2pts. YOU HAVE FORGOTTEN YOUR BINOCULARS. Return to the last habitat you visited to collect them.',1),('House Martin (124) 2pts',1),('House Sparrow (184) 1pt',1),('Jackdaw (179) 1pt. BRAKES FAIL! Miss one turn.',1),('Little Owl (108) 2pts. FLYING ALONG! Move on five squares.',1),('Magpie (177) 1pt. LOSE COMPRESSION! Maximum speed 50mph for two turns.',1),('Magpie (177) 1pt. SEE BIRD IN FIELD. Go back four squares for a closer look (yes, it has flown off!)',1),('Mistle Thrush (145) 1pt',1),('PEREGRINE! Peregrine stoops over habitat causing major disturbance. This card may be played when an opponent is at ANY habitat - that play must then leave the habitat.',3),('PERMIT - return when used. Also: Kestrel (39) 1pt',2),('Pheasant (50) 1pt. GET LOST! Ask directions from player to your left - who then moves your vehicle to any road square.',1),('Pheasant (50) 1pt. OH! JUST MISS A TURN.',1),('Pheasant (50) 1pt. SWERVE TO AVOID PHEASANT! Yes, you have hit a tree. Miss three turns while waiting for a new vehicle to continue.',1),('Red Legged Partridge (47) 3pts. GOING WELL. Move on two squares.',1),('Robin (134) 1pt',1),('Sparrowhawk (35) 2pts',1),('Sparrowhawk (35) 2pts.  GOING WELL! Move on three squares.',1),('Stock Dove (101) 2pts',2),('Swallow (123) 1pt',1),('Swift (113) 2pts',2),('Turtle Dove (104) 2pts. CLEAR ROAD! Move on four squares.',1),('WILD GOOSE CHASE! By landing on the same square as an opponent you may give them false information - and place them directly on any other square.',3),('Woodpigeon (102) 1pt',1),('Wren (132) 1pt',1);
+/*!40000 ALTER TABLE `tbl_travel` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -120,4 +218,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-07-17 21:22:16
+-- Dump completed on 2022-07-18  9:27:15
