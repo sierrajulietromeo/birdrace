@@ -1,9 +1,9 @@
 #imports (standard flask and mysqlconnector)
 from flask import Flask, render_template, request
-import mysql.connector
 from datetime import datetime
 from random import randint, choices
-import os
+import sqlite3
+#import os
 
 #today = date.today()
 
@@ -13,12 +13,13 @@ app.secret_key = "abc"
 
 #connecting to local database. This is obvs terrible security. 
 try:
-    birddb = mysql.connector.connect(user='steve', password='steve123',
-                                host='127.0.0.1', database='birdrace',
-                                auth_plugin='mysql_native_password')
+    # birddb = mysql.connector.connect(user='steve', password='steve123',
+    #                             host='127.0.0.1', database='birdrace',
+    #                             auth_plugin='mysql_native_password')
+    connection = sqlite3.connect("birdrace.db")
 
-except mysql.connector.Error as err:
-  print(f"Something went wrong: {err}")
+except:
+  print(f"Something went wrong")
 
 
 def default_query(query):
