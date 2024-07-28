@@ -2,62 +2,15 @@
 from flask import Flask, render_template, request
 from datetime import datetime
 from random import randint, choices
-import sqlite3
-#import os
+from drawcard import draw_phone_card, draw_travel_card
+from database import default_query
+import secrets
 
 #today = date.today()
 
 app = Flask(__name__)
-app.secret_key = "abc"  
+app.secret_key = secrets.token_urlsafe(32) 
 
-
-#connecting to local database. This is obvs terrible security. 
-try:
-    # birddb = mysql.connector.connect(user='steve', password='steve123',
-    #                             host='127.0.0.1', database='birdrace',
-    #                             auth_plugin='mysql_native_password')
-    connection = sqlite3.connect("birdrace.db")
-
-except:
-  print(f"Something went wrong")
-
-
-def default_query(query):
-    cursor = birddb.cursor()
-    cursor.execute(query)
-    results = cursor.fetchall()
-    return results
-
-def draw_phone_card():
-    
-    phone_query = 'SELECT * FROM tbl_phone'
-    phone_query = default_query(phone_query)
-    phone_card = [arr[0] for arr in phone_query]
-    phone_weight = [arr[1] for arr in phone_query]
-
-    ph_card = choices(phone_card,
-                      phone_weight,
-                      k=1
-                     )
-    ph_card = str(ph_card[0])  # cast to str in this case
-
-    return ph_card
-
-
-def draw_travel_card():
-
-    travel_query = 'SELECT * FROM tbl_travel'
-    travel_query = default_query(travel_query)
-    travel_card = [arr[0] for arr in travel_query]
-    travel_weight = [arr[1] for arr in travel_query]
-
-    tr_card = choices(travel_card,
-                      travel_weight,
-                      k=1
-                     )
-    tr_card = str(tr_card[0])  # cast to str in this case
-
-    return tr_card
 
 #Code runs if index.html called (root)
 @app.route('/', methods=['GET', 'POST'])
