@@ -1,8 +1,7 @@
 #imports (standard flask and mysqlconnector)
 from flask import Flask, render_template, request
-from datetime import datetime
 from random import randint, choices
-from drawcard import draw_phone_card, draw_travel_card
+from helper import draw_phone_card, draw_travel_card, get_dropdown_data, draw_arrival_card, draw_rarity_card
 from database import default_query
 import secrets
 
@@ -20,7 +19,7 @@ def index():
     elif "travel" in request.form:
         return render_template('/travel.html', data=draw_travel_card())
     elif "habitat" in request.form:
-        return render_template('/habitat.html') 
+        return render_template('/habitat.html', options=get_dropdown_data()) 
     else:
         return render_template('/index.html')
 
@@ -40,7 +39,35 @@ def travel():
     if "again" in request.form:
         return render_template('/travel.html', data=draw_travel_card())
     else:
-        return render_template('/index.html')        
+        return render_template('/index.html') 
+
+
+#Code runs if rarity.html called 
+@app.route('/rarity', methods=['GET', 'POST'])
+def rarity():
+    if "again" in request.form:
+        return render_template('/rarity.html', data=draw_rarity_card())
+    else:
+        return render_template('/habitat.html', options=get_dropdown_data())    
+
+
+#Code runs if arrival.html called 
+@app.route('/arrival', methods=['GET', 'POST'])
+def arrival():
+    if "again" in request.form:
+        return render_template('/arrival.html', data=draw_arrival_card())
+    else:
+        return render_template('/habitat.html', options=get_dropdown_data())        
+
+
+@app.route('/habitat', methods=['GET', 'POST'])
+def habitat():
+    if "arrival" in request.form:
+        return render_template('/arrival.html', data=draw_arrival_card())
+    elif "rarity" in request.form:
+        return render_template('/rarity.html', data=draw_rarity_card())
+    else:
+        return render_template('/index.html') 
 
 
 if __name__ == '__main__':
