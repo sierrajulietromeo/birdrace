@@ -18,3 +18,18 @@
 06/05/2020 17:35:12 Player: 2 Great Black Backed Gull 2 Beach
 06/05/2020 17:35:13 Player: 2 Ringed Plover 2 Beach
 06/05/2020 17:35:15 Player: 2 Oystercatcher 1 Beach
+29/07/2024 17:20:53 Player: 1 Woodcock 2 MixedWood
+29/07/2024 17:20:53 Player: 1 Turtle Dove 2 MixedWood
+29/07/2024 17:20:53 Player: 1 Turtle Dove 2 MixedWood
+29/07/2024 17:20:53 Player: 1 Jay 2 MixedWood
+29/07/2024 17:20:53 Player: 1 Blackcap 3 MixedWood
+29/07/2024 17:20:53 Player: 1 Long Tailed Tit 2 MixedWood
+29/07/2024 17:30:28 Player: 1 Goshawk 5 ConiferWood
+29/07/2024 17:31:37 Player: 1 Goshawk 5 ConiferWood
+29/07/2024 17:31:37 Player: 1 Goshawk 5 ConiferWood
+29/07/2024 17:31:37 Player: 1 Sparrowhawk 2 ConiferWood
+29/07/2024 17:31:37 Player: 1 Magpie 1 ConiferWood
+29/07/2024 17:31:37 Player: 1 Crested Tit 4 ConiferWood
+29/07/2024 17:31:37 Player: 1 Coal Tit 2 ConiferWood
+29/07/2024 17:34:28 Player: 1 Grey Plover 2 Beach
+29/07/2024 17:36:16 Player: 1 Sanderling 3 Beach

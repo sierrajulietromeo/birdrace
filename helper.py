@@ -41,8 +41,6 @@ def draw_arrival_card():
         return None     
 
 
-
-
 def count_birds():
   result = default_query("SELECT COUNT(*) FROM tbl_bird")
   return result[0][0]
@@ -53,12 +51,45 @@ def get_dropdown_data():
 
 
 
-def file_write(bird_spot_name, bird_spot_point, hab_value, player_num):
+def spot_bird(player_num, habitat_dropdown, num_spottings):
+
+    
+
+    # Combine habitat dropdown construction
+    habitat_condition = habitat_dropdown + ' <> 0'
+
+    spotted_birds = []
+    for i in range(1, num_spottings + 1):
+        # Single query with combined condition
+        bird_query = f"""
+            SELECT tbl_bird.Number, tbl_bird.Name, tbl_bird.Points
+            FROM tbl_bird
+            INNER JOIN tbl_frequency ON tbl_bird.Number = tbl_frequency.Num
+            WHERE {habitat_condition}
+        """
+
+        # Fetch bird data and frequencies
+        bird_data = default_query(bird_query)
+        bird_frequencies = [row[0] for row in default_query(f"SELECT {habitat_dropdown} FROM tbl_frequency INNER JOIN tbl_bird ON tbl_bird.Number=tbl_frequency.Num WHERE {habitat_condition}")]
+
+        # Select bird based on frequency using random.choices
+        spotted_bird = choices(bird_data, weights=bird_frequencies, k=1)
+
+        # Extract bird details from the chosen bird data
+        bird_number, bird_name, bird_points = spotted_bird[0]
+
+        spotted_birds.append({"number": bird_number, "name": bird_name, "points": bird_points})
+        
+        file_write(bird_name, bird_points, habitat_dropdown, player_num)
+
+    return spotted_birds
+
+def file_write(bird_name, bird_points, habitat_dropdown, player_num):
   
   try:
     now = datetime.now()
     formatted_time = now.strftime("%d/%m/%Y %H:%M:%S")
     with open("spottings.txt", "a") as f:
-      f.write(f"{formatted_time} Player: {player_num.value} {bird_spot_name} {bird_spot_point} {hab_value}\n")
+      f.write(f"{formatted_time} Player: {player_num} {bird_name} {bird_points} {habitat_dropdown}\n")
   except (IOError, OSError) as e:
     print(f"Error writing to file: {e}")

@@ -67,3 +67,21 @@ input[type="submit"] {
   margin-bottom: 20px;
 }
 
+/* Style the select elements */
+select {
+  padding: 15px 32px; /* Match button padding */
+  background-color: rgb(166, 205, 88); /* Match button background */
+  color: black; /* Match button text color */
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Style the labels for select elements */
+label {
+  display: block; /* Ensure labels are displayed on separate lines */
+  margin-bottom: 10px; /* Add spacing between label and select */
+  font-size: 16px; /* Match button font size */
+  color: rgb(0, 0, 0); /* Match button background for a subtle label */
+}
+

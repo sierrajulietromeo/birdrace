@@ -1,7 +1,7 @@
 #imports (standard flask and mysqlconnector)
 from flask import Flask, render_template, request
 from random import randint, choices
-from helper import draw_phone_card, draw_travel_card, get_dropdown_data, draw_arrival_card, draw_rarity_card
+from helper import *
 from database import default_query
 import secrets
 
@@ -66,8 +66,23 @@ def habitat():
         return render_template('/arrival.html', data=draw_arrival_card())
     elif "rarity" in request.form:
         return render_template('/rarity.html', data=draw_rarity_card())
+    elif "spot" in request.form:
+        player_number = request.form['player']
+        player_habitat = request.form['habitat']
+        num_birds = int(request.form['num_birds'])
+
+        spot_bird(player_number, player_habitat.replace(" ", ""), num_birds)
+
+       
+        return render_template('/spot.html' )
     else:
         return render_template('/index.html') 
+    
+#Code runs if start.html called 
+@app.route('/spot', methods=['POST', 'GET'])
+def spot():
+
+    return render_template('/habitat.html', options=get_dropdown_data())
 
 
 if __name__ == '__main__':
