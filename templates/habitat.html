@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visiting a habitat</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/styles.css') }}">
+</head>
+<body>
+    <main>
+        <div class="card-container">
+            <div class="card-text">
+                <p>{{ data }}</p>
+            </div>
+            <form method="POST" action="/habitat">
+                <input type="submit" name="arrival" value="Take an arrival card">
+                <input type="submit" name="rarity" value="Take a rarity card">
+                <label for="player-select">Player:</label>
+                <select id="player-select" name="player">    
+                    <option value=1>Player 1</option>
+                    <option value=2>Player 2</option>
+                    <option value=3>Player 3</option>
+                    <option value=4>Player 4</option>
+                    <option value=5>Player 5</option>
+                    <option value=6>Player 6</option>
+                </select>
+                <label for="habitat-select">Habitat:</label>
+                <select id="habitat-select" name="habitat"> 
+                    {% for option in options %}
+                        <option value="{{ option[0] }}">{{ option[0] }}</option>
+                    {% endfor %}
+                </select>
+                <label for="num-birds-select">Number of birds spotted:</label>
+                <select id="num-birds-select" name="num_birds">
+                    <option value=1>1 Bird</option>
+                    <option value=2>2 Birds</option>
+                    <option value=3>3 Birds</option>
+                    <option value=4>4 Birds</option>
+                    <option value=5>5 Birds</option>
+                    <option value=6>6 Birds</option>
+                </select>
+                <input type="submit" name="spot" value="Start Spotting!">
+                
+                <input type="submit" name="index" value="Back">
+                
+
+            </form>
+        </div>
+    </main>
+</body>
+</html>
+
+
+
