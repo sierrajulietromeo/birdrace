@@ -11,7 +11,14 @@
     <main>
         <div class="card-container">
             <div class="card-text">
-                <p>{{ data }}</p>
+                {% for item in data %}
+                <p>
+                    {% for value in item %}
+                        {{ value }}
+                        {% if not loop.last %} - {% endif %}
+                    {% endfor %}
+                </p>
+                {% endfor %}
             </div>
             <form method="POST" action="/spot">
                 
