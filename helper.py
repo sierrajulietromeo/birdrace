@@ -4,7 +4,6 @@ from database import default_query
 
 
 def draw_phone_card():
-    
     phone_query = default_query("SELECT Card, Weight FROM tbl_phone")
     cards, weights = zip(*phone_query)
     selected_card = choices(cards, weights=weights)[0]
@@ -12,7 +11,6 @@ def draw_phone_card():
 
 
 def draw_travel_card():
-    
     travel_query = default_query("SELECT Card, Frequency FROM tbl_travel")
     cards, weights = zip(*travel_query)
     selected_card = choices(cards, weights=weights)[0]
@@ -20,7 +18,6 @@ def draw_travel_card():
 
 
 def draw_rarity_card():
-   
     try:
         result = default_query("SELECT Card FROM tbl_rarity ORDER BY RANDOM() LIMIT 1")
         print(result)
@@ -33,7 +30,6 @@ def draw_rarity_card():
     
 
 def draw_arrival_card():
-   
     try:
         result = default_query("SELECT Card, Weight FROM tbl_arrival")
         cards, weights = zip(*result)
@@ -55,11 +51,9 @@ def get_dropdown_data():
 
 
 def spot_bird(player_num, habitat_dropdown, num_spottings):
-
     # Combine habitat dropdown construction
     habitat_condition = habitat_dropdown.replace(" ", "") + ' <> 0'
     
-
     spotted_birds = []
     for _ in range(1, num_spottings + 1):
         # Single query with combined condition
@@ -86,8 +80,8 @@ def spot_bird(player_num, habitat_dropdown, num_spottings):
 
     return spotted_birds
 
+
 def file_write(bird_name, bird_points, player_num, habitat_dropdown="RARE"):
-  
   try:
     now = datetime.now()
     formatted_time = now.strftime("%d/%m/%Y %H:%M:%S")
