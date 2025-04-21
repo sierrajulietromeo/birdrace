@@ -23,6 +23,9 @@ def draw_rarity_card():
    
     try:
         result = default_query("SELECT Card FROM tbl_rarity ORDER BY RANDOM() LIMIT 1")
+        print(result)
+        file_write(result[0][0], "RARE" , "RARE")
+
         return result[0][0]
     except Exception as e:
         print(f"Error selecting rarity card: {e}")
@@ -53,10 +56,9 @@ def get_dropdown_data():
 
 def spot_bird(player_num, habitat_dropdown, num_spottings):
 
-    
-
     # Combine habitat dropdown construction
-    habitat_condition = habitat_dropdown + ' <> 0'
+    habitat_condition = habitat_dropdown.replace(" ", "") + ' <> 0'
+    
 
     spotted_birds = []
     for _ in range(1, num_spottings + 1):
@@ -78,13 +80,13 @@ def spot_bird(player_num, habitat_dropdown, num_spottings):
         # Extract bird details from the chosen bird data
         bird_number, bird_name, bird_points = spotted_bird[0]
 
-        spotted_birds.append({"number": bird_number, "name": bird_name, "points": bird_points})
+        spotted_birds.append([bird_number, bird_name, bird_points])
         
-        file_write(bird_name, bird_points, habitat_dropdown, player_num)
+        file_write(bird_name, bird_points, player_num, habitat_dropdown)
 
     return spotted_birds
 
-def file_write(bird_name, bird_points, habitat_dropdown, player_num):
+def file_write(bird_name, bird_points, player_num, habitat_dropdown="RARE"):
   
   try:
     now = datetime.now()
