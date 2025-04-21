@@ -147,3 +147,5 @@
 21/04/2025 11:03:43 Player: 1 Red Legged Partridge 2 Heath
 21/04/2025 11:03:43 Player: 1 Winchat 3 Heath
 21/04/2025 11:03:43 Player: 1 Quail 4 Heath
+21/04/2025 12:50:12 Player: 1 Great Black Backed Gull 2 Estuary
+21/04/2025 12:50:17 Player: 1 Magpie 1 ConiferWood
