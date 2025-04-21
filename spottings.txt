@@ -36,3 +36,99 @@
 21/04/2025 09:54:06 Player: 2 Whimbrel 3 Estuary
 21/04/2025 09:54:17 Player: 1 Herring Gull 1 Beach
 21/04/2025 09:54:24 Player: 2 Herring Gull 1 Beach
+21/04/2025 10:02:02 Player: 1 Tree Pipit 3 OakWood
+21/04/2025 10:15:08 Player: RARE Sub-Alpine Warbler (211) 15pts RARE RARE
+21/04/2025 10:19:24 Player: 1 Ringed Plover 2 Beach
+21/04/2025 10:19:45 Player: 1 Sanderling 3 Beach
+21/04/2025 10:19:45 Player: 1 Great Black Backed Gull 2 Beach
+21/04/2025 10:19:45 Player: 1 Dunlin 2 Beach
+21/04/2025 10:21:41 Player: 1 Kentish Plover 4 Beach
+21/04/2025 10:21:41 Player: 1 Grey Plover 2 Beach
+21/04/2025 10:21:41 Player: 1 Kentish Plover 4 Beach
+21/04/2025 10:21:53 Player: 1 Kentish Plover 4 Beach
+21/04/2025 10:21:53 Player: 1 Ringed Plover 2 Beach
+21/04/2025 10:21:53 Player: 1 Common Gull 2 Beach
+21/04/2025 10:22:05 Player: 1 Great Black Backed Gull 2 Beach
+21/04/2025 10:22:05 Player: 1 Oystercatcher 1 Beach
+21/04/2025 10:22:05 Player: 1 Grey Plover 2 Beach
+21/04/2025 10:22:05 Player: 1 Grey Plover 2 Beach
+21/04/2025 10:22:05 Player: 1 Oystercatcher 1 Beach
+21/04/2025 10:22:05 Player: 1 Grey Plover 2 Beach
+21/04/2025 10:29:33 Player: 1 Grey Plover 2 Beach
+21/04/2025 10:29:45 Player: 1 Knot 2 Beach
+21/04/2025 10:29:45 Player: 1 Herring Gull 1 Beach
+21/04/2025 10:29:45 Player: 1 Sanderling 3 Beach
+21/04/2025 10:30:01 Player: 1 Oystercatcher 1 Beach
+21/04/2025 10:30:01 Player: 1 Kentish Plover 4 Beach
+21/04/2025 10:30:01 Player: 1 Kentish Plover 4 Beach
+21/04/2025 10:30:01 Player: 1 Little Tern 4 Beach
+21/04/2025 10:30:01 Player: 1 Knot 2 Beach
+21/04/2025 10:30:01 Player: 1 Knot 2 Beach
+21/04/2025 10:30:09 Player: 1 Herring Gull 1 Beach
+21/04/2025 10:30:09 Player: 1 Oystercatcher 1 Beach
+21/04/2025 10:30:09 Player: 1 Grey Plover 2 Beach
+21/04/2025 10:30:09 Player: 1 Oystercatcher 1 Beach
+21/04/2025 10:30:09 Player: 1 Knot 2 Beach
+21/04/2025 10:30:09 Player: 1 Ringed Plover 2 Beach
+21/04/2025 10:30:17 Player: 1 Herring Gull 1 Beach
+21/04/2025 10:30:19 Player: 1 Dunlin 2 Beach
+21/04/2025 10:30:22 Player: 1 Oystercatcher 1 Beach
+21/04/2025 10:30:24 Player: 1 Great Black Backed Gull 2 Beach
+21/04/2025 10:30:29 Player: 1 Ringed Plover 2 Beach
+21/04/2025 10:30:29 Player: 1 Grey Plover 2 Beach
+21/04/2025 10:30:29 Player: 1 Oystercatcher 1 Beach
+21/04/2025 10:30:29 Player: 1 Herring Gull 1 Beach
+21/04/2025 10:30:29 Player: 1 Oystercatcher 1 Beach
+21/04/2025 10:30:29 Player: 1 Knot 2 Beach
+21/04/2025 10:30:36 Player: 1 Little Tern 4 Beach
+21/04/2025 10:30:36 Player: 1 Oystercatcher 1 Beach
+21/04/2025 10:30:36 Player: 1 Oystercatcher 1 Beach
+21/04/2025 10:30:36 Player: 1 Great Black Backed Gull 2 Beach
+21/04/2025 10:30:36 Player: 1 Oystercatcher 1 Beach
+21/04/2025 10:30:36 Player: 1 Knot 2 Beach
+21/04/2025 10:30:42 Player: 1 Little Tern 4 Beach
+21/04/2025 10:30:42 Player: 1 Oystercatcher 1 Beach
+21/04/2025 10:30:42 Player: 1 Grey Plover 2 Beach
+21/04/2025 10:30:42 Player: 1 Grey Plover 2 Beach
+21/04/2025 10:30:42 Player: 1 Common Gull 2 Beach
+21/04/2025 10:30:42 Player: 1 Great Black Backed Gull 2 Beach
+21/04/2025 10:30:47 Player: 1 Knot 2 Beach
+21/04/2025 10:30:47 Player: 1 Grey Plover 2 Beach
+21/04/2025 10:30:47 Player: 1 Grey Plover 2 Beach
+21/04/2025 10:30:47 Player: 1 Oystercatcher 1 Beach
+21/04/2025 10:30:47 Player: 1 Kentish Plover 4 Beach
+21/04/2025 10:30:47 Player: 1 Herring Gull 1 Beach
+21/04/2025 10:30:55 Player: 1 Willow Warbler 2 Churchyard
+21/04/2025 10:30:55 Player: 1 Willow Warbler 2 Churchyard
+21/04/2025 10:30:55 Player: 1 Bullfinch 2 Churchyard
+21/04/2025 10:30:55 Player: 1 Chaffinch 1 Churchyard
+21/04/2025 10:30:55 Player: 1 Hawfinch 4 Churchyard
+21/04/2025 10:30:55 Player: 1 Robin 2 Churchyard
+21/04/2025 10:31:09 Player: 1 Reed Warbler 2 Lake
+21/04/2025 10:31:09 Player: 1 Teal 2 Lake
+21/04/2025 10:31:09 Player: 1 Moorhen 1 Lake
+21/04/2025 10:31:09 Player: 1 Moorhen 1 Lake
+21/04/2025 10:32:40 Player: 1 Razorbill 3 Island
+21/04/2025 10:32:40 Player: 1 Razorbill 3 Island
+21/04/2025 10:32:40 Player: 1 Kittiwake 2 Island
+21/04/2025 10:32:40 Player: 1 Rock Pipit 2 Island
+21/04/2025 10:32:40 Player: 1 Razorbill 3 Island
+21/04/2025 10:32:40 Player: 1 Eider 2 Island
+21/04/2025 10:32:51 Player: 1 Oystercatcher 1 Beach
+21/04/2025 10:32:51 Player: 1 Oystercatcher 1 Beach
+21/04/2025 10:32:51 Player: 1 Turnstone 2 Beach
+21/04/2025 10:32:51 Player: 1 Oystercatcher 1 Beach
+21/04/2025 10:32:51 Player: 1 Kentish Plover 4 Beach
+21/04/2025 10:32:51 Player: 1 Little Tern 4 Beach
+21/04/2025 10:32:59 Player: 1 Blue Tit 1 MixedWood
+21/04/2025 10:32:59 Player: 1 Blackcap 3 MixedWood
+21/04/2025 10:32:59 Player: 1 Willow Warbler 2 MixedWood
+21/04/2025 10:32:59 Player: 1 Greenfinch 2 MixedWood
+21/04/2025 10:32:59 Player: 1 Willow Warbler 2 MixedWood
+21/04/2025 10:32:59 Player: 1 Pheasant 1 MixedWood
+21/04/2025 10:34:52 Player: 1 Knot 2 Beach
+21/04/2025 10:35:47 Player: 1 Common Gull 2 Beach
+21/04/2025 10:37:25 Player: 1 Kentish Plover 4 Beach
+21/04/2025 10:37:25 Player: 1 Common Gull 2 Beach
+21/04/2025 10:37:25 Player: 1 Common Gull 2 Beach
+21/04/2025 10:37:25 Player: 1 Sanderling 3 Beach
