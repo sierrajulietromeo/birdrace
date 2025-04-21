@@ -18,7 +18,7 @@ def fetch_bird_data(bird_name, page=1, page_size=1, region="Western Europe", has
         'name': bird_name,
         'region' : region,
         'hasImg' : has_image,
-        'operator': 'AND'  # Assuming you want all conditions to be true
+        'operator': 'AND'  
         
     }
    
@@ -32,12 +32,12 @@ def fetch_bird_data(bird_name, page=1, page_size=1, region="Western Europe", has
             bird_info = data['entities'][0]
             image_url = None
             if 'images' in bird_info and len(bird_info['images']) > 0:
-                image_url = bird_info['images'][0]  # Assuming the URL is directly in the list
-            return {'name': bird_info.get('name'),  # Use 'name' from the response
-                    'scientific_name': bird_info.get('sciName'), # Use 'sciName'
+                image_url = bird_info['images'][0] 
+            return {'name': bird_info.get('name'),  
+                    'scientific_name': bird_info.get('sciName'), 
                     'family': bird_info.get('family'),
                     'image_url': image_url,
-                    'conservation_status': bird_info.get('status')} # Use 'status'
+                    'conservation_status': bird_info.get('status')} 
         else:
             return {'error': f"No information found for '{bird_name}' with the specified criteria."}
     except requests.exceptions.RequestException as e:
