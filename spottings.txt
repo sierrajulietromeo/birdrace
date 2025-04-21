@@ -147,3 +147,22 @@
 21/04/2025 11:03:43 Player: 1 Red Legged Partridge 2 Heath
 21/04/2025 11:03:43 Player: 1 Winchat 3 Heath
 21/04/2025 11:03:43 Player: 1 Quail 4 Heath
+21/04/2025 12:42:36 Player: 1 Oystercatcher 1 Beach
+21/04/2025 12:42:49 Player: 1 Curlew 3 Estuary
+21/04/2025 12:42:49 Player: 1 Ringed Plover 2 Estuary
+21/04/2025 12:42:50 Player: 1 Knot 2 Estuary
+21/04/2025 12:42:50 Player: 1 Shelduck 2 Estuary
+21/04/2025 12:42:50 Player: 1 Shelduck 2 Estuary
+21/04/2025 12:42:50 Player: 1 Ruff 3 Estuary
+21/04/2025 12:43:16 Player: 1 Twite 3 Mountains
+21/04/2025 12:43:16 Player: 1 Raven 3 Mountains
+21/04/2025 12:43:16 Player: 1 Black Throated Diver 4 Mountains
+21/04/2025 12:43:16 Player: 1 Golden Plover 3 Mountains
+21/04/2025 12:43:16 Player: 1 Twite 3 Mountains
+21/04/2025 12:43:17 Player: 1 Short Eared Owl 3 Mountains
+21/04/2025 12:43:36 Player: 1 Manderin 3 Reservoir
+21/04/2025 12:43:37 Player: 1 Pochard 2 Reservoir
+21/04/2025 12:43:37 Player: 1 Moorhen 1 Reservoir
+21/04/2025 12:43:37 Player: 1 Yellow Wagtail 3 Reservoir
+21/04/2025 12:43:37 Player: 1 Tufted Duck 2 Reservoir
+21/04/2025 12:43:37 Player: 1 Great Crested Grebe 2 Reservoir
