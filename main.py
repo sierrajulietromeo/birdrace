@@ -1,11 +1,9 @@
-#imports (standard flask and mysqlconnector)
+#imports 
 from flask import Flask, render_template, request
 from random import randint, choices
 from helper import *
 from database import default_query
 import secrets
-
-#today = date.today()
 
 app = Flask(__name__)
 app.secret_key = secrets.token_urlsafe(32) 

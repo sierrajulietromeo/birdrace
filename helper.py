@@ -59,7 +59,7 @@ def spot_bird(player_num, habitat_dropdown, num_spottings):
     habitat_condition = habitat_dropdown + ' <> 0'
 
     spotted_birds = []
-    for i in range(1, num_spottings + 1):
+    for _ in range(1, num_spottings + 1):
         # Single query with combined condition
         bird_query = f"""
             SELECT tbl_bird.Number, tbl_bird.Name, tbl_bird.Points
