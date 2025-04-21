@@ -1,6 +1,9 @@
 from random import choices
 from datetime import datetime
-from database import default_query 
+from database import default_query
+from api import fetch_bird_data
+
+
 
 
 def draw_phone_card():
@@ -74,7 +77,9 @@ def spot_bird(player_num, habitat_dropdown, num_spottings):
         # Extract bird details from the chosen bird data
         bird_number, bird_name, bird_points = spotted_bird[0]
 
-        spotted_birds.append([bird_number, bird_name, bird_points])
+        bird_data_json = fetch_bird_data(bird_name)
+
+        spotted_birds.append([bird_number, bird_name, bird_points, bird_data_json])
         
         file_write(bird_name, bird_points, player_num, habitat_dropdown)
 
