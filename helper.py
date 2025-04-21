@@ -52,7 +52,7 @@ def get_dropdown_data():
 
 def spot_bird(player_num, habitat_dropdown, num_spottings):
     # Combine habitat dropdown construction
-    habitat_condition = habitat_dropdown.replace(" ", "") + ' <> 0'
+    habitat_condition = habitat_dropdown + ' <> 0'
     
     spotted_birds = []
     for _ in range(1, num_spottings + 1):

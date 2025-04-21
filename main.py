@@ -63,7 +63,7 @@ def habitat():
         return render_template('/rarity.html', data=draw_rarity_card())
     elif "spot" in request.form:
         player_number = request.form['player']
-        player_habitat = request.form['habitat']
+        player_habitat = request.form['habitat'].replace(" ", "")
         num_birds = int(request.form['num_birds'])
 
 
