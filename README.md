@@ -10,6 +10,12 @@ It is not (yet) meant to replace playing the game in person. You still need a bo
 
 The idea originated during the lockdown of Spring 2020. I wanted to play the board game with people remotely, so we used a web cam to project the board. This small app just allowed the game to flow a little more swiftly, as there was no need now to shuffle and manage the many decks of cards.
 
+Here's a picture of v1 in use during the Spring of 2020. Webcam projecting the board to my mum and dad:
+
+![Playing the game online](./static/playing_the_game.JPG)
+
+It doesn't show up on the photo particularly well, but that's a large cutout colour photo of my mum on the board - her playing piece!
+
 ## Version history
 
 * v1 : Used Python, Guizero and SQLite
