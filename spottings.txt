@@ -33,3 +33,6 @@
 29/07/2024 17:31:37 Player: 1 Coal Tit 2 ConiferWood
 29/07/2024 17:34:28 Player: 1 Grey Plover 2 Beach
 29/07/2024 17:36:16 Player: 1 Sanderling 3 Beach
+21/04/2025 09:54:06 Player: 2 Whimbrel 3 Estuary
+21/04/2025 09:54:17 Player: 1 Herring Gull 1 Beach
+21/04/2025 09:54:24 Player: 2 Herring Gull 1 Beach
