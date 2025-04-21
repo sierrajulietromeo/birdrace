@@ -10,10 +10,10 @@ The idea originated during the lockdown of Spring 2020. I wanted to play the boa
 
 ## Version history
 
-v1 : Used Python, Guizero and SQLite
-v2 : Used Python, Guizero and MySQL (just to see if I could, really!)
-v3 : Used Python, Flash and HTML - for easier display on the web
-v4 : 2024 reboot - Tidied up the code A LOT (my 2020 code was terrible, but it worked). Switch back to SQLite3, because it's just more appropriate.
+* v1 : Used Python, Guizero and SQLite
+* v2 : Used Python, Guizero and MySQL (just to see if I could, really!)
+* v3 : Used Python, Flash and HTML - for easier display on the web
+* v4 : 2024 reboot - Tidied up the code A LOT (my 2020 code was terrible, but it worked). Switch back to SQLite3, because it's just more appropriate.
 
 
 ## To do list
