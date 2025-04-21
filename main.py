@@ -69,10 +69,8 @@ def habitat():
         player_habitat = request.form['habitat']
         num_birds = int(request.form['num_birds'])
 
-        spot_bird(player_number, player_habitat.replace(" ", ""), num_birds)
 
-       
-        return render_template('/spot.html' )
+        return render_template('/spot.html', data=spot_bird(player_number, player_habitat, num_birds) )
     else:
         return render_template('/index.html') 
     
