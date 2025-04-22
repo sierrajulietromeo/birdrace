@@ -170,3 +170,8 @@
 22/04/2025 14:20:11 Player: 1 Kentish Plover 4 Beach
 22/04/2025 14:20:11 Player: 1 Dunlin 2 Beach
 22/04/2025 14:20:11 Player: 1 Herring Gull 1 Beach
+22/04/2025 19:39:08 Player: 5 Tree Pipit 3 Heath
+22/04/2025 19:39:08 Player: 5 Linnet 2 Heath
+22/04/2025 19:39:08 Player: 5 Cirl Bunting 5 Heath
+22/04/2025 19:39:27 Player: 1 Jay 2 ConiferWood
+22/04/2025 19:39:27 Player: 1 Sparrowhawk 2 ConiferWood
