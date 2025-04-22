@@ -20,9 +20,7 @@ def draw_travel_card():
 def draw_rarity_card():
     try:
         result = default_query("SELECT Card FROM tbl_rarity ORDER BY RANDOM() LIMIT 1")
-        print(result)
-        file_write(result[0][0], "RARE" , "RARE")
-
+        file_write(result[0][0], "RARE" , "RARE") # Update possible here - more elegant way needed
         return result[0][0]
     except Exception as e:
         print(f"Error selecting rarity card: {e}")
