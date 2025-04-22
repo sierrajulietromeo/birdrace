@@ -1,22 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bird Race Game</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/styles.css') }}">
-</head>
-<body>
-    <main>
-        <center>
-            <img src="{{url_for('static', filename='box.jpg')}}" alt="Board game box art">
-            <form method="POST" action="/">
-                <input type="submit" name="phone" value="Make a phone call">
-                <input type="submit" name="travel" value="Take a travel card">
-                <input type="submit" name="habitat" value="Visit habitat">
-            </form>
-        </center>
-    </main>
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block title %}Bird Race Game{% endblock %}
+
+{% block content %}
+<center>
+    <img src="{{url_for('static', filename='box.jpg')}}" alt="Board game box art">
+    <form method="POST" action="/">
+        <input type="submit" name="phone" value="Make a phone call">
+        <input type="submit" name="travel" value="Take a travel card">
+        <input type="submit" name="habitat" value="Visit habitat">
+    </form>
+</center>
+{% endblock %}
