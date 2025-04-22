@@ -4,29 +4,33 @@ from database import default_query
 
 
 def draw_phone_card():
-    phone_query = default_query("SELECT Card, Weight FROM tbl_phone")
-    cards, weights = zip(*phone_query)
-    selected_card = choices(cards, weights=weights)[0]
-    return str(selected_card)
+    try:
+        phone_query = default_query("SELECT Card, Weight FROM tbl_phone")
+        cards, weights = zip(*phone_query)
+        selected_card = choices(cards, weights=weights)[0]
+        return selected_card
+    except:
+        return "Error drawing phone card"
+       
 
 
 def draw_travel_card():
-    travel_query = default_query("SELECT Card, Frequency FROM tbl_travel")
-    cards, weights = zip(*travel_query)
-    selected_card = choices(cards, weights=weights)[0]
-    return str(selected_card)
+    try:
+        travel_query = default_query("SELECT Card, Frequency FROM tbl_travel")
+        cards, weights = zip(*travel_query)
+        selected_card = choices(cards, weights=weights)[0]
+        return selected_card
+    except:
+        return "Error drawing travel card"
 
 
 def draw_rarity_card():
     try:
         result = default_query("SELECT Card FROM tbl_rarity ORDER BY RANDOM() LIMIT 1")
-        print(result)
         file_write(result[0][0], "RARE" , "RARE")
-
         return result[0][0]
-    except Exception as e:
-        print(f"Error selecting rarity card: {e}")
-        return None 
+    except:
+        return "Error drawing rarity card" 
     
 
 def draw_arrival_card():
@@ -35,19 +39,20 @@ def draw_arrival_card():
         cards, weights = zip(*result)
         selected_card = choices(cards, weights=weights)[0]
         return selected_card
-    except Exception as e:
-        print(f"Error selecting arrival card: {e}")
-        return None     
+    except:
+        return "Error drawing arrival card"      
 
 
 def count_birds():
-  result = default_query("SELECT COUNT(*) FROM tbl_bird")
-  return result[0][0]
+    try:
+        result = default_query("SELECT COUNT(*) FROM tbl_bird")
+        return result[0][0]
+    except:
+        return None
 
 
 def get_dropdown_data():
     return default_query("SELECT Name FROM tbl_habitat")
-
 
 
 def spot_bird(player_num, habitat_dropdown, num_spottings):
@@ -64,19 +69,22 @@ def spot_bird(player_num, habitat_dropdown, num_spottings):
             WHERE {habitat_condition}
         """
 
-        # Fetch bird data and frequencies
-        bird_data = default_query(bird_query)
-        bird_frequencies = [row[0] for row in default_query(f"SELECT {habitat_dropdown} FROM tbl_frequency INNER JOIN tbl_bird ON tbl_bird.Number=tbl_frequency.Num WHERE {habitat_condition}")]
+        try:
+            # Fetch bird data and frequencies
+            bird_data = default_query(bird_query)
+            bird_frequencies = [row[0] for row in default_query(f"SELECT {habitat_dropdown} FROM tbl_frequency INNER JOIN tbl_bird ON tbl_bird.Number=tbl_frequency.Num WHERE {habitat_condition}")]
 
-        # Select bird based on frequency using random.choices
-        spotted_bird = choices(bird_data, weights=bird_frequencies, k=1)
+            # Select bird based on frequency using random.choices
+            spotted_bird = choices(bird_data, weights=bird_frequencies, k=1)
 
-        # Extract bird details from the chosen bird data
-        bird_number, bird_name, bird_points = spotted_bird[0]
+            # Extract bird details from the chosen bird data
+            bird_number, bird_name, bird_points = spotted_bird[0]
 
-        spotted_birds.append([bird_number, bird_name, bird_points])
-        
-        file_write(bird_name, bird_points, player_num, habitat_dropdown)
+            spotted_birds.append([bird_number, bird_name, bird_points])
+            
+            file_write(bird_name, bird_points, player_num, habitat_dropdown)
+        except:
+            pass
 
     return spotted_birds
 
