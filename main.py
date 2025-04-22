@@ -1,4 +1,3 @@
-#imports 
 from flask import Flask, render_template, request
 from helper import *
 import secrets
@@ -20,7 +19,6 @@ def index():
         return render_template('/index.html')
 
 
-
 @app.route('/phone', methods=['GET', 'POST'])
 def phone():
     if "again" in request.form:
@@ -37,14 +35,12 @@ def travel():
         return render_template('/index.html') 
 
 
- 
 @app.route('/rarity', methods=['GET', 'POST'])
 def rarity():
     if "again" in request.form:
         return render_template('/rarity.html', data=draw_rarity_card())
     else:
         return render_template('/habitat.html', options=get_dropdown_data())    
-
 
 
 @app.route('/arrival', methods=['GET', 'POST'])
@@ -76,6 +72,7 @@ def habitat():
 def spot():
 
     return render_template('/habitat.html', options=get_dropdown_data())
+
 
 
 if __name__ == '__main__':
