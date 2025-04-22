@@ -1,5 +1,6 @@
 # birdrace
-App for Bill Oddies Great Bird Race game
+
+## App for Bill Oddies Great Bird Race game
 
 ![Picture of the box](./static/box.jpg)
 
