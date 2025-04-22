@@ -149,3 +149,24 @@
 21/04/2025 11:03:43 Player: 1 Quail 4 Heath
 21/04/2025 12:50:12 Player: 1 Great Black Backed Gull 2 Estuary
 21/04/2025 12:50:17 Player: 1 Magpie 1 ConiferWood
+22/04/2025 14:19:50 Player: RARE Purple Heron (208) 15pts RARE RARE
+22/04/2025 14:19:51 Player: RARE Woodchat Shrike (213) 15pts RARE RARE
+22/04/2025 14:19:52 Player: RARE YOU'VE DIPPED OUT! Too many noisy birdwatchers have disturbed the rarity and it's flown off! RARE RARE
+22/04/2025 14:19:52 Player: RARE Purple Heron (208) 15pts RARE RARE
+22/04/2025 14:19:53 Player: RARE YOU'VE DIPPED OUT! Too many noisy birdwatchers have disturbed the rarity and it's flown off! RARE RARE
+22/04/2025 14:19:54 Player: RARE YOU'VE DIPPED OUT! You arrive to find the rarity has been eaten by a Sparrowhawk - bad luck! RARE RARE
+22/04/2025 14:19:55 Player: RARE YOU'VE DIPPED OUT! RARE RARE
+22/04/2025 14:19:55 Player: RARE Bee-Eater (206) 25pts RARE RARE
+22/04/2025 14:19:56 Player: RARE Bee-Eater (206) 25pts RARE RARE
+22/04/2025 14:19:57 Player: RARE YOU'VE DIPPED OUT! You arrive to find the rarity has been eaten by a Sparrowhawk - bad luck! RARE RARE
+22/04/2025 14:19:58 Player: RARE Woodchat Shrike (213) 15pts RARE RARE
+22/04/2025 14:19:59 Player: RARE White Winged Black Tern (207) 15pts RARE RARE
+22/04/2025 14:20:00 Player: RARE YOU'VE DIPPED OUT! Too many noisy birdwatchers have disturbed the rarity and it's flown off! RARE RARE
+22/04/2025 14:20:01 Player: RARE YOU'VE DIPPED OUT! Too many noisy birdwatchers have disturbed the rarity and it's flown off! RARE RARE
+22/04/2025 14:20:02 Player: RARE Sub-Alpine Warbler (211) 15pts RARE RARE
+22/04/2025 14:20:03 Player: RARE Rufous Bush Robin (212) 30pts RARE RARE
+22/04/2025 14:20:11 Player: 1 Oystercatcher 1 Beach
+22/04/2025 14:20:11 Player: 1 Sanderling 3 Beach
+22/04/2025 14:20:11 Player: 1 Kentish Plover 4 Beach
+22/04/2025 14:20:11 Player: 1 Dunlin 2 Beach
+22/04/2025 14:20:11 Player: 1 Herring Gull 1 Beach
