@@ -1,6 +1,8 @@
 # birdrace
 App for Bill Oddies Great Bird Race game
 
+![Picture of the box](./static/box.jpg)
+
 http://www.birdwatchingtrips.co.uk/bird-blog/blast-from-the-past-with-bill-oddie
 
 TV screen grab on YouTube from one of the original designers: https://www.youtube.com/watch?v=3geoaZavYg0
