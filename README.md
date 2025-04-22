@@ -21,9 +21,9 @@ It doesn't show up on the photo particularly well, but that's a large cutout col
 ## Version history
 
 * v1 : Used Python, Guizero and SQLite
-* v2 : Used Python, Guizero and MySQL (just for learning really)
-* v3 : Used Python, Flash and HTML - for easier display on the web
-* v4 : 2024 reboot - Tidied up the code A LOT (my 2020 code was terrible, but it worked). Switched back to SQLite3, because it's just makes more sense.
+* v2 : Used Python, Guizero and MySQL (just for me learning more about hosting MySQL databases really!)
+* v3 : Used Python, Flask and HTML - for easier display on the web
+* v4 : 2024 reboot - Tidied up the code A LOT (my 2020 code was terrible, but it worked). Switched back to SQLite, because it's just makes more sense. Python / Flask / SQLite
 
 
 ## To do list
