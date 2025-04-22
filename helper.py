@@ -27,7 +27,7 @@ def draw_travel_card():
 def draw_rarity_card():
     try:
         result = default_query("SELECT Card FROM tbl_rarity ORDER BY RANDOM() LIMIT 1")
-        file_write(result[0][0], "RARE" , "RARE")
+        file_write(result[0][0], "RARE" , "RARE") # Update possible here - more elegant way needed
         return result[0][0]
     except:
         return "Error drawing rarity card" 
